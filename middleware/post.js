@@ -14,7 +14,7 @@ function validatePost() {
 function validatePostId() {
     return (req, res, next) => {
         posts
-          .getById(req.params.is)
+          .getById(req.params.id)
           .then((post) => {
               if (post) {
                   req.post = post
