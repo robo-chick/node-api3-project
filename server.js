@@ -3,7 +3,9 @@ const userRouter = require("./users/userRouter")
 const postRouter = require("./posts/postRouter")
 
 const server = express();
-const port = 4000
+
+// use port 4000 unless there is a preconfigured port
+const port = process.env.PORT || 4000
 
 server.use(express.json())
 
